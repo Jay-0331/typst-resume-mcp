@@ -1,0 +1,55 @@
+{
+  "name": "typst-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that compiles Typst resumes from YAML content into PDF files.",
+  "module": "index.ts",
+  "type": "module",
+  "main": "index.ts",
+  "bin": {
+    "typst-mcp": "index.ts"
+  },
+  "license": "MIT",
+  "author": "Jay Vekariya <vekariya.ja@northeastern.edu>",
+  "homepage": "https://github.com/Jay-3103/typst-resume-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay-3103/typst-resume-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jay-3103/typst-resume-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "typst",
+    "resume",
+    "pdf",
+    "yaml",
+    "cv",
+    "claude",
+    "llm"
+  ],
+  "files": [
+    "index.ts",
+    "typt_template/template.typ",
+    "typt_template/cv.typ",
+    "typt_template/utils.typ",
+    "typt_template/resume.schema.json",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

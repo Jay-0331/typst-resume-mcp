@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.Jay-3103/typst-resume-mcp",
+  "description": "MCP server that compiles Typst resumes from YAML content into PDF files.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/Jay-3103/typst-resume-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "typst-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "TYPST_OUTPUT_DIR",
+          "description": "Absolute path to the directory where compiled PDFs are written.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "TYPST_TEMPLATE_DIR",
+          "description": "Absolute path to the directory containing template.typ, cv.typ, utils.typ. Defaults to the bundled typt_template/.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
